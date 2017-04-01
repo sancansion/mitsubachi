@@ -15,8 +15,8 @@
 *
 * ======================================================= */
 body {
-	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3", "Hiragino Kaku Gothic Pro", "ƒƒCƒŠƒI", Meiryo,
-		"‚l‚r ‚oƒSƒVƒbƒN", Verdana, Arial, Helvetica, sans-serif;
+	font-family: "Arial", "ƒqƒ‰ƒMƒmŠpƒS Pro W3", "Hiragino Kaku Gothic Pro",
+		"ƒƒCƒŠƒI", Meiryo, "‚l‚r ‚oƒSƒVƒbƒN", Verdana, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.7;
@@ -593,8 +593,8 @@ form label {
 	/*   font-weight: bold; */
 	color: #F14E95;
 	/*  font-family: "Sacramento", Arial, serif; */
-	font-family: "ƒqƒ‰ƒMƒmŠpƒS Pro W3", "Hiragino Kaku Gothic Pro", "ƒƒCƒŠƒI", Meiryo,
-		"‚l‚r ‚oƒSƒVƒbƒN", Verdana, Arial, Helvetica, sans-serif;
+	font-family: "Arial", "ƒqƒ‰ƒMƒmŠpƒS Pro W3", "Hiragino Kaku Gothic Pro",
+		"ƒƒCƒŠƒI", Meiryo, "‚l‚r ‚oƒSƒVƒbƒN", Verdana, Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -728,8 +728,8 @@ form label {
 	.blog .more {
 		display: inline-block;
 		/* background: #F6C; */
-		border: 1px solid #F6C;
-		color: #F6C;
+		border: 1px solid #FF7F50;
+		color: #FF7F50;
 		vertical-align: middle;
 		font-size: 14px;
 		font-weight: bold;
@@ -743,8 +743,8 @@ form label {
 	.blog .more {
 		display: block;
 		background: #fff;
-		border: 2px solid #F6C;
-		color: #F6C;
+		border: 2px solid #FF7F50;
+		color: #FF7F50;
 		vertical-align: middle;
 		font-size: 14px;
 		padding: 8px 8px;
@@ -802,7 +802,7 @@ form label {
 		border: none;
 		display: block;
 		color: #333;
-		text-align: center;
+		
 		text-decoration: none;
 		font-size: 14px;
 	}
@@ -810,7 +810,7 @@ form label {
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		background: #FFE4E1;
+		background: #FFFACD;
 		z-index: 9999999999;
 		-moz-opacity: 0.9;
 		opacity: 0.9;
@@ -880,13 +880,16 @@ h1.type1-1 {
 	margin-bottom: 30px;
 	position: relative;
 	padding: 5px;
-	background-color: #FFF0F5;
+	background-color: #FFFACD;
 }
 
 h1.type1-1 span {
+	background: url(../images/bee_orange.png) no-repeat left center;
+	background-size:35px 35px;
 	display: block;
 	padding: 10px;
-	border: 1px dashed #DB7093;
+	padding-left:35px;
+	border: 1px dashed #FF8C00;
 	color: #690303;
 }
 
@@ -901,7 +904,7 @@ h1.type1-1::before {
 	top: 100%;
 	left: 0;
 	border-width: 0 10px 10px 0;
-	border-right-color: #FFF0F5;
+	border-right-color: #FFFACD;
 }
 
 h1.type1-1::after {
@@ -909,31 +912,38 @@ h1.type1-1::after {
 	right: 0;
 	border-style: solid;
 	border-width: 0 15px 15px 0;
-	border-bottom-color: #FFF0F5;
+	border-bottom-color: #FFFACD;
 }
 
 h2.type2-1 {
 	font-size: 20px; /* •¶š‚Ì‘å‚«‚³ */
 	font-weight: bold; /* •¶š‚Ì‘¾‚³ */
 	color: #fff; /* •¶š‚ÌF */
-	border: 2px dashed #ffecef; /* ƒXƒeƒbƒ`‚Ì‘¾‚³Eí—ŞEƒJƒ‰[ */
-	background: #F9B8CD; /* ”wŒiF */
+	border: 2px dashed #FFFACD; /* ƒXƒeƒbƒ`‚Ì‘¾‚³Eí—ŞEƒJƒ‰[ */
+	background: #FFA07A; /* ”wŒiF */
 	border-radius: 8px; /* l‹÷‚ÌŠÛ‚İ */
-	box-shadow: 0 0 3px 3px #F9B8CD;
+	box-shadow: 0 0 3px 3px #FFA07A;
 	margin: 0 0 1.5em;
 	padding: 0.5em 0.8em;
+}
+h2.type2-1  span {
+	background: url(../images/bee.png) no-repeat left center;
+	background-size:35px 35px;
+	display: block;
+	padding-left:40px;
+	color: #690303;
 }
 
 h3 {
 	font-size: 16px;
 	padding: 1em;
-	border: 2px solid #F9C;
+	border: 2px solid #FF7F50;
 	border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
-	color: #F6C;
+	color: #FF7F50;
 }
 
-h4{
-		background: none;
+h4 {
+	background: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	font-size: 160%;
@@ -980,7 +990,11 @@ ul.shop-list li {
 	font-size: 18px;
 }
 
-.clear{
-	clear:both;
+.clear {
+	clear: both;
 }
+
+
+.icon-bee{
+	
 }

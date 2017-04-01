@@ -8,12 +8,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Miss Mrs" />
 
-<meta name="description" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
-<meta name="keywords" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="description" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="keywords" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
 
 <!-- START:SNS meta-->
 <?php include("common/sns_meta.html"); ?>
@@ -43,10 +43,10 @@
 			<div class="container">
 				<div class="row">
 					<h1 class="type1-1">
-						<span class="icon-heart"> Miss Mrs ミスミセス</span>
+						<span> Mitsubachi みつばち</span>
 					</h1>
 					<h2 class="type2-1">
-						<span class="icon-heart"> 求人情報</span>
+						<span> 求人情報</span>
 					</h2>
 					<div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-md-offset-1 text-center fh5co-heading animate-box">
 						<a href="recruit/index.php">
@@ -60,7 +60,7 @@
 			<div class="container">
 				<div class="row">
 					<h2 class="type2-1">
-						<span class="icon-heart"> ご予約・お問合せ</span>
+						<span> ご予約・お問合せ</span>
 					</h2>
 					<div class="col-md-6  text-center fh5co-heading animate-box">
 						<a href="tel:090-3053-0184">
@@ -68,7 +68,7 @@
 						</a>
 					</div>
 					<div class="col-md-6  text-center fh5co-heading animate-box">
-						<a href="mailto:missmrs@docomo.ne.jp">
+						<a href="mailto:mitsubachi@docomo.ne.jp">
 							<img src="images/mail.png" class="image-witdh100">
 						</a>
 					</div>
@@ -98,10 +98,10 @@
 			<div class="container">
 				<div class="row">
 					<h2 class="type2-1">
-						<span class="icon-heart"> ミスミセスのブログ</span>
+						<span> みつばちのブログ</span>
 					</h2>
 					<div class="col-md-6  text-center fh5co-heading animate-box blog">
-						<h3 class="index-h3">Miss Mrsの出勤ブログ</h3>
+						<h3 class="index-h3">みつばちの出勤ブログ</h3>
 						<div class="text-left">
 							<?php
                                 // モジュールを読み込む
@@ -135,14 +135,14 @@
                                 }
                                  ?>
 							<a href="http://blog.livedoor.jp/missmrs02/" target="_blank" class="more">
-								Mrs.Miss Blogはこちら
+								Mitsubachi Blogはこちら
 								<span>▲</span>
 							</a>
 						</div>
 					</div>
 
 					<div class="col-md-6  text-center fh5co-heading animate-box blog">
-						<h3 class="index-h3">週間出勤情報とMrsのお知らせブログ</h3>
+						<h3 class="index-h3">週間出勤情報とお知らせブログ</h3>
 						<div class="text-left">
 							<?php
                         // モジュールを読み込む
@@ -199,34 +199,34 @@
 		
 		<!-- END:SNS -->
 
-		<!-- START:About MissMrs -->
+		<!-- START:About mitsubachi -->
 
 			<div class="container">
 				<div class="row">
 					<h2 class="type2-1">
-						<span class="icon-heart"> About ミスミセス</span>
+						<span> About みつばち</span>
 					</h2>
 					<div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-md-offset-1 text-left fh5co-heading animate-box about-missmrs">
-						<p>当店Miss.Mrs(ミスミセス)は大阪市北区は南森町.扇町.天六.ミナミ(中央区)には長堀橋にある完全予約制のプライベートメンズエステです。</p>
-						<p>営業時間は午前11:00〜翌朝5:00迄(最終受付午前3:00)全室駅から近く各駅から2分以内の綺麗なシャワー完備の完全個室型になっております。</p>
+						<p>当店Mitsubachi(みつばち)は大阪市北区は南森町.扇町.天六.ミナミ(中央区)には長堀橋にある完全予約制のプライベートメンズエステです。</p>
+						<p>営業時間は午前12:00〜翌朝1:00迄(最終受付23:00)全室駅から近く各駅から2分以内の綺麗なシャワー完備の完全個室型になっております。</p>
 						<p>20代〜40代の愛嬌、品、マナーのある素敵な女性が多数在籍しており各セラピストによる貴方様に合った癒しを提供しています。</p>
 						<p>セラピストの技術向上の為、当店では研修も徹底している為、お好みの箇所などお気軽にお申し付け下さい。</p>
 						<p>当店は、リピーター様を大事にがコンセプトで受付時には、是非セラピストのタイプをお申し付け下さい。</p>
 						<p>新規のお客様に置かれましても、リピーター様になって頂ける様に、お客様に合ったセラピストを御案内致します！</p>
 						<p>あそこに行けば間違い無いと言われる様、これからも多数の新人セラピストの導入各セラピストの技術向上、接客スタイルなど誠心誠意向上していく所存です。</p>
-						<p>皆様に最高の癒しと安らぎを提供出来ます様、日々努力致しますので、メンズエステMiss.Mrs(ミスミセス)をこれからもよろしくお願い致します！</p>
+						<p>皆様に最高の癒しと安らぎを提供出来ます様、日々努力致しますので、メンズエステMitsubachi(みつばち)をこれからもよろしくお願い致します！</p>
 					</div>
 				</div>
 			</div>
 
-			<!-- END:About MissMrs -->
+			<!-- END:About Mitsubachi -->
 
 		<!-- START:Refnavi -->
 		
 			<div class="container">
 				<div class="row">
 					<h2 class="type2-1">
-						<span class="icon-heart"> 相互リンク</span>
+						<span> 相互リンク</span>
 					</h2>
 
 					<div class="col-md-4 text-center fh5co-heading animate-box">

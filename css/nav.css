@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-	font: 14px/2 "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3",
+	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3",
 		"Hiragino Kaku Gothic Pro"; /*文字サイズ・行間・フォント設定*/
 }
 
@@ -19,11 +19,11 @@ ul {
 #contact a {
 	text-decoration: none;
 	display: inline-block;
-	background: #25b4b0; /*背景色（古いブラウザ用）*/
+	background: #FF7F50; /*背景色（古いブラウザ用）*/
 	background: -webkit-gradient(linear, left top, left bottom, from(#F6C),
 		to(#F9C)); /*グラデーション*/
-	background: -webkit-linear-gradient(#F6C, #F9C); /*同上*/
-	background: linear-gradient(#F6C, #F9C); /*同上*/
+	background: -webkit-linear-gradient(#FF7F50, #FF8C00); /*同上*/
+	background: linear-gradient(#FF7F50, #FF8C00); /*同上*/
 	color: #FFF; /*文字色*/
 	padding: 4px 20px 8px; /*上、左右、下へのボックス内の余白*/
 	border-radius: 0px 0px 8px 8px; /*角丸のサイズ。左上、右上、右下、左下。*/
