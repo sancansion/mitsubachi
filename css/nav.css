@@ -113,7 +113,7 @@ ul {
 	}
 	nav#mainmenu ul li a:hover {
 		border: 1px dotted #F14E95;
-		color: #F14E95;
+		color: #f57900;
 	}
 }
 
@@ -191,7 +191,7 @@ ul {
 		margin-right: 0;
 	}
 	nav#mainmenu ul li a:hover {
-		border: 1px dotted #F14E95;
-		color: #F14E95;
+		border: 1px dotted #ed801d;
+		color: #ed801d;
 	}
 }

@@ -34,14 +34,13 @@ body {
 }
 
 a {
-	color: #F14E95;
+	color: #f57900;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
-	transition: 0.5s;
 }
 
 a:hover, a:active, a:focus {
-	color: #F14E95;
+	color: #f57900;
 	outline: none;
 	text-decoration: none;
 }
@@ -66,6 +65,13 @@ a:hover, a:active, a:focus {
 
 @media screen and (max-width: 480px) {
 	.fh5co-cover {
+		height: 360px;
+		background-image: url(../images/top.jpg);
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.fh5co-cover {
 		height: 440px;
 		background-image: url(../images/top.jpg);
 	}
@@ -73,20 +79,20 @@ a:hover, a:active, a:focus {
 
 @media screen and (max-width: 360px) {
 	.fh5co-cover {
-		height: 560px;
+		height: 480px;
 		background-image: url(../images/top.jpg);
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.fh5co-cover.fh5co-cover-sm {
-		height: 400px;
+		height: 320px;
 	}
 }
 
 .fh5co-cover.fh5co-cover-sm .display-t, .fh5co-cover.fh5co-cover-sm .display-tc
 	{
-	height: 600px;
+	height: 520px;
 	display: table;
 	width: 100%;
 }
@@ -94,7 +100,7 @@ a:hover, a:active, a:focus {
 @media screen and (max-width: 768px) {
 	.fh5co-cover.fh5co-cover-sm .display-t, .fh5co-cover.fh5co-cover-sm .display-tc
 		{
-		height: 400px;
+		height:320x;
 	}
 }
 
