@@ -8,12 +8,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>料金システム | ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>料金システム | みちばつ | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Miss Mrs" />
+<meta name="author" content="mitsubachi" />
 
-<meta name="description" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
-<meta name="keywords" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="description" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 " />
+<meta name="keywords" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 " />
 
 <!-- START:SNS meta-->
 <?php include("common/sns_meta.html"); ?>
@@ -54,7 +54,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>9,000</span>
+								<span>7,000</span>
 								yen
 							</dd>
 						</dl>
@@ -70,7 +70,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>11,000</span>
+								<span>9,000</span>
 								yen
 							</dd>
 						</dl>
@@ -84,7 +84,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>15,000</span>
+								<span>12,000</span>
 								yen
 							</dd>
 						</dl>
@@ -100,7 +100,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>19,000</span>
+								<span>15,000</span>
 								yen
 							</dd>
 						</dl>

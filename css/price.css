@@ -11,10 +11,10 @@
 		margin: 0;
 		padding: 0; /* for Opera8 */
 		background: #fff;
-		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
-			"ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
-		font-size: 14px; /* ※サイトにより変更　基本は12px */
-		line-height: 1.6; /* ※サイトにより変更　基本は1.6 */
+		font-family: "繝偵Λ繧ｮ繝手ｧ偵ざ Pro W3", "Hiragino Kaku Gothic Pro", "繝｡繧､繝ｪ繧ｪ", Meiryo,
+			"�ｼｭ�ｼｳ �ｼｰ繧ｴ繧ｷ繝�繧ｯ", Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px; /* 窶ｻ繧ｵ繧､繝医↓繧医ｊ螟画峩縲�蝓ｺ譛ｬ縺ｯ12px */
+		line-height: 1.6; /* 窶ｻ繧ｵ繧､繝医↓繧医ｊ螟画峩縲�蝓ｺ譛ｬ縺ｯ1.6 */
 		-webkit-text-size-adjust: 100%;
 	}
 
@@ -49,8 +49,8 @@
 		left: 0;
 		top: 0;
 		background: #FFF;
-		border: 1px solid #F6C;
-		color: #F6C;
+		border: 1px solid #FF8C00;
+		color: #FF8C00;
 		padding: 1px 7px;
 	}
 	.block-02 dl {
@@ -70,7 +70,7 @@
 	}
 	.block-02 dl span {
 		font-family: 'Playfair Display', serif;
-		color: #F6C;
+		color: #FF8C00;
 		font-size: 60px;
 		letter-spacing: -0.05em;
 		font-style: italic;
@@ -101,10 +101,10 @@
 		margin: 0;
 		padding: 0; /* for Opera8 */
 		background: #fff;
-		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
-			"ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
-		font-size: 14px; /* ※サイトにより変更　基本は12px */
-		line-height: 1.6; /* ※サイトにより変更　基本は1.6 */
+		font-family: "繝偵Λ繧ｮ繝手ｧ偵ざ Pro W3", "Hiragino Kaku Gothic Pro", "繝｡繧､繝ｪ繧ｪ", Meiryo,
+			"�ｼｭ�ｼｳ �ｼｰ繧ｴ繧ｷ繝�繧ｯ", Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px; /* 窶ｻ繧ｵ繧､繝医↓繧医ｊ螟画峩縲�蝓ｺ譛ｬ縺ｯ12px */
+		line-height: 1.6; /* 窶ｻ繧ｵ繧､繝医↓繧医ｊ螟画峩縲�蝓ｺ譛ｬ縺ｯ1.6 */
 		-webkit-text-size-adjust: 100%;
 	}
 
@@ -126,13 +126,12 @@
 		font-style: bold;
 		text-align: left;
 		left: 0;
-		border: 1px solid #F6C;
-		color: #F6C;
+		border: 1px solid #FF8C00;
+		color: #FF8C00;
 		padding: 3px 8px;
 		font-size: 11px;
 		display: inline-block;
 		border: 1px solid #F6C;
-		color: #F6C;
 		background: #FFF;
 		position: relative;
 		left: 0;
@@ -166,7 +165,7 @@
 	}
 	.block-02 dl span {
 		font-family: 'Playfair Display', serif;
-		color: #F6C;
+		color: #FF8C00;
 		font-size: 30px;
 		letter-spacing: -0.05em;
 		font-style: italic;
@@ -218,7 +217,7 @@
 	}
 	.block-02 .left dl span, .block-02 .right dl span {
 		font-family: 'Playfair Display', serif;
-		color: #F6C;
+		color: #FF8C00;
 		font-size: 30px;
 		letter-spacing: -0.05em;
 		font-style: italic;
