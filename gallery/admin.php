@@ -219,10 +219,6 @@ if ( (isset($_POST['submit']) || isset($_POST['edit_submit']) ) && !isset($_POST
 		  $dspno = $_POST['dspno'];
 		}
 
-		$type = 1;
-		if(isset($_POST['type'])){
-		  $type = replace_func($_POST['type']);
-		}
 
 		$age = "";
 		if(isset($_POST['age'])){
@@ -243,7 +239,7 @@ if ( (isset($_POST['submit']) || isset($_POST['edit_submit']) ) && !isset($_POST
 		
 		$fp = @fopen($file_path, "r+b") or die("fopen Error!!DESUYO--!!!");
 		//$writeData = $id  . "," .$up_ymd. "," .$title. "," .$extension. ",".$dspno.",". "\n";
-		$writeData = $id  . "," .$up_ymd. "," .$title. "," .$extension. ",".$dspno."," .$type."," .$age."," .$experience. "," .$looking. ",". "\n";
+		$writeData = $id  . "," .$up_ymd. "," .$title. "," .$extension. ",".$dspno."," .$age."," .$experience. "," .$looking. ",". "\n";
 
 		 // 俳他的ロック
 		if(flock($fp, LOCK_EX)){
@@ -382,16 +378,6 @@ if($mode == 'edit'){
 <input type="hidden" name="dspno" value="<?php if(!empty($lines_array[4])) echo $lines_array[4];?>" />
 <?php if(strpos($id,'no_disp') !== false) $id = str_replace('no_disp','',$id); ?>
 <p class="taC target_photo"><a href="<?php echo $img_updir.'/'.$id.'.'.$lines_array[3];?>" class="photo"><img src="<?php echo $img_updir.'/'.$id.'.'.$lines_array[3];?>" height="200" /></a></p>
-<?php $up_ymd_array = explode("/",$lines_array[1]);?>
-
-0<?php echo $lines_array[0]?><br>
-1<?php echo $lines_array[1]?><br>
-2<?php echo $lines_array[2]?><br>
-3<?php echo $lines_array[3]?><br>
-4<?php echo $lines_array[4]?><br>
-5<?php echo $lines_array[5]?><br>
-6<?php echo $lines_array[6]?><br>
-7<?php echo $lines_array[7]?>
 
 <p>日付：<input type="text" name="year" size="5" maxlength="4" value="<?php echo $up_ymd_array[0];?>" /> 年 <input type="text" name="month" size="2" maxlength="2" value="<?php echo $up_ymd_array[1];?>" /> 月 <input type="text" name="day" size="2" maxlength="2" value="<?php echo $up_ymd_array[2];?>" /> 日　※半角数字のみ</p>
 
@@ -401,24 +387,18 @@ if($mode == 'edit'){
 <br />
 
 
-<br>
-<p>Miss Or Mrs<br>
-	<input type="radio" name="type" value="1"  <?php if($lines_array[5] == 1){ print "checked";}?>> Miss
-	<input type="radio" name="type" value="2" <?php if($lines_array[5] == 2){ print "checked";}?>> Mrs
-</p>
-
-<p>年齢：<input type="text" name="age" size="2" maxlength="2" value="<?php echo $lines_array[6]?>" /> 
+<p>年齢：<input type="text" name="age" size="2" maxlength="2" value="<?php echo $lines_array[5]?>" /> 
 </p>
 
 <p>経験有無<br>
-	<input type="radio" name="experience" value="1" <?php if($lines_array[7] == 1){ print "checked";}?>> あり
-	<input type="radio" name="experience" value="2" <?php if($lines_array[7] == 2){ print "checked";}?>> なし
+	<input type="radio" name="experience" value="1" <?php if($lines_array[6] == 1){ print "checked";}?>> あり
+	<input type="radio" name="experience" value="2" <?php if($lines_array[6] == 2){ print "checked";}?>> なし
 </p>
 
 <p>経験有無<br>
-	<input type="radio" name="looking" value="1" <?php if($lines_array[8] == 1){ print "checked";}?>> スレンダー
-	<input type="radio" name="looking" value="2" <?php if($lines_array[8] == 2){ print "checked";}?>> 普通
-	<input type="radio" name="looking" value="3" <?php if($lines_array[8] == 3){ print "checked";}?>> むっちり
+	<input type="radio" name="looking" value="1" <?php if($lines_array[7] == 1){ print "checked";}?>> スレンダー
+	<input type="radio" name="looking" value="2" <?php if($lines_array[7] == 2){ print "checked";}?>> 普通
+	<input type="radio" name="looking" value="3" <?php if($lines_array[7] == 3){ print "checked";}?>> むっちり
 </p>
 
 <p>■削除チェック　<input type="checkbox" name="del" value="true" /> <span style="font-size:13px;color:#666">※削除する場合はこちらにチェックを入れて「変更」ボタンを押してください。データ（画像データ含む）は完全に削除されます。</span></p>
@@ -446,11 +426,6 @@ if($mode == 'edit'){
 <h3>画像アップロード（jpg、gif、pngのみ）</h3><p>
 ※事前に縮小の必要はありません。横写真または縦写真とも設定ファイル（config.php）で設定した幅、または高さに自動縮小されます。現在は<span style="color:red"><?php echo $imgWidthHeight;?></span>px<br />※日本語ファイル名でも問題ありません。自動で半角英数字にリネームされます。アニメーションgifは不可<br />
 
-
-<p>Miss Or Mrs<br>
-	<input type="radio" name="type" value="1" /> Miss
-	<input type="radio" name="type" value="2" /> Mrs
-</p>
 
 <p>年齢：<input type="text" name="age" size="2" maxlength="2" value="" /> 
 </p>
@@ -525,22 +500,17 @@ for($i = $pager['index']; ($i-$pager['index']) < $pagelengthAdmin; $i++){
 		$lines_array[$i][3] = rtrim($lines_array[$i][3]);
 		$lines_array[$i][1] = ymd2format($lines_array[$i][1]);//日付フォーマットの適用
 		$alt_text = str_replace('<br />','',$lines_array[$i][2]);
-		if($lines_array[$i][5] == 1){
-			$type = "Miss.";
-		} else {
-			$type = "Mrs.";
-		}
 
-		if($lines_array[$i][7] == 1){
+		if($lines_array[$i][6] == 1){
 			$experience = "あり";
 		} else {
 			$experience = "なし";
 		}
 
 
-		if($lines_array[$i][8] == 1){
+		if($lines_array[$i][7] == 1){
 			$looking = "スレンダー";
-		} else if ($lines_array[$i][8] == 2){
+		} else if ($lines_array[$i][7] == 2){
 			$looking = "普通";
 		} else {
 			$looking = "むっちり";
@@ -555,7 +525,7 @@ echo <<<EOF
 {$lines_array[$i][1]} 
 <a class="photo" href="{$img_updir}/{$img_id}.{$lines_array[$i][3]}" 
 	title="
-	$type {$lines_array[$i][2]} ({$lines_array[$i][6]})
+  {$lines_array[$i][2]} ({$lines_array[$i][5]})
 	<br />
 	セラピスト経験：$experience / 体型：$looking
 	">
@@ -573,7 +543,7 @@ echo <<<EOF
 <li>{$lines_array[$i][1]}  
 <a class="photo" href="{$img_updir}/{$id}.{$lines_array[$i][3]}" 
 title="
-	$type {$lines_array[$i][2]} ({$lines_array[$i][6]})
+	{$lines_array[$i][2]} ({$lines_array[$i][5]})
 	<br />
 	セラピスト経験：$experience / 体型：$looking
 ">
