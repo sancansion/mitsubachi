@@ -26,9 +26,6 @@
 <body>
 
 	<div class="fh5co-loader"></div>
-	<!-- START:Facebook js -->
-	<?php include("common/facebook_js.html"); ?>
-	<!-- END:Facebook js -->
 	<div id="page">
 
 
@@ -39,10 +36,10 @@
 		<!-- START:Main -->
 		<div id="container">
 			<h1 class="type1-1">
-				<span class="icon-heart"> セラピストさん大募集!!</span>
+				<span> セラピストさん大募集!!</span>
 			</h1>
 			<h2 class="type2-1">
-				<span class="icon-heart"> 求人情報</span>
+				<span> 求人情報</span>
 			</h2>
 
 			<div class="row">
