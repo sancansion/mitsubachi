@@ -100,7 +100,7 @@
 					<h2 class="type2-1">
 						<span> みつばちのブログ</span>
 					</h2>
-					<div class="col-md-6  text-center fh5co-heading animate-box blog">
+					<div class="col-md-12  text-center fh5co-heading animate-box blog">
 						<h3 class="index-h3">みつばちの出勤ブログ</h3>
 						<div class="text-left">
 							<?php
@@ -113,7 +113,7 @@
                                 // 日本語バケないためにOUTPUT_ENCODINGをUTF-8にする
                                 define("MAGPIE_OUTPUT_ENCODING","UTF-8");
                                 // 取得したいRSSのurl
-                                $url = "http://blog.livedoor.jp/missmrs02/atom.xml";
+                                $url = "http://blog.livedoor.jp/honeybee0401/atom.xml";
 
                                 // ブログのタイトルは$rss->channel['title']という変数、
                                 // RSSは$rss->itemという変数に入る。
@@ -141,42 +141,6 @@
 						</div>
 					</div>
 
-					<div class="col-md-6  text-center fh5co-heading animate-box blog">
-						<h3 class="index-h3">週間出勤情報とお知らせブログ</h3>
-						<div class="text-left">
-							<?php
-                        // モジュールを読み込む
-                        require_once("./magpierss/rss_fetch.inc");
-
-                        $url = "http://missmrs05.blog.fc2.com/?xml";
-
-                        // ブログのタイトルは$rss->channel['title']という変数、
-                        // RSSは$rss->itemという変数に入る。
-                        // key値、link/title/descriptionで取得できる。
-                        $rss = fetch_rss( $url );
-                        //var_dump ($rss)more;
-                        $max_lines = 10;
-                        $line = 0;
-                        //echo "". mb_convert_encoding($rss->channel['title'],"UTF-8","auto");
-                        foreach ($rss->items as $item) {
-                        $link = mb_convert_encoding($item['link'],"UTF-8","auto");
-                        $title = mb_convert_encoding($item['title'],"UTF-8","auto");
-                        $description = mb_convert_encoding($item['description'],"UTF-8","auto");
-                        $date = date("Y.m.d H:i", strtotime(substr($item['dc']['date'],0,10)));
-                        if (preg_match("/PR$/", $title) != 0) continue;
-                        if (preg_match("/^PR:.+$/", $title) != 0) continue;
-                        if ($line++ == $max_lines) break;
-                        //echo "<a href=$link">$title</a><br />$description";
-                        echo "<dl><dt>$date</dt><dd><a href=\"$link\" target=\"_blank\">$title</a></dd></dl>";
-                        }
-                        ?>
-
-							<a href="http://missmrs05.blog.fc2.com/" target="_blank" class="more">
-								週間出勤情報とお知らせブログ
-								<span>▲</span>
-							</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		
