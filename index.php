@@ -63,12 +63,12 @@
 						<span> ご予約・お問合せ</span>
 					</h2>
 					<div class="col-md-6  text-center fh5co-heading animate-box">
-						<a href="tel:090-3053-0184">
+						<a href="tel:080-1524-6132">
 							<img src="images/tel.png" class="image-witdh100">
 						</a>
 					</div>
 					<div class="col-md-6  text-center fh5co-heading animate-box">
-						<a href="mailto:mitsubachi@docomo.ne.jp">
+						<a href="mailto:honey-bee01@docomo.ne.jp">
 							<img src="images/mail.png" class="image-witdh100">
 						</a>
 					</div>
@@ -78,13 +78,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6  text-center fh5co-heading animate-box">
-						<a href="sms:090-3053-0184">
+						<a href="sms:080-1524-6132">
 							<img src="images/sms.png" class="image-witdh100">
 						</a>
 					</div>
 										
 					<div class="col-md-6  text-center fh5co-heading animate-box">
-						<a href="http://line.me/ti/p/LIL-_8S4Qh">
+						<a href="http://line.me/ti/p/syj882TyuO">
 							<img src="images/line.png" class="image-witdh100">
 						</a>
 					</div>
@@ -134,7 +134,7 @@
                                 echo "<dl><dt>$date</dt><dd><a href=\"$link\" target=\"_blank\">$title</a></dd></dl>";
                                 }
                                  ?>
-							<a href="http://blog.livedoor.jp/missmrs02/" target="_blank" class="more">
+							<a href="http://blog.livedoor.jp/honeybee0401/archives/1339330.html" target="_blank" class="more">
 								Mitsubachi Blogはこちら
 								<span>▲</span>
 							</a>
@@ -146,22 +146,7 @@
 		
 		<!-- END:blog -->
 
-		<!-- START:SNS -->
-		<div class="container">
-			<div class="row">
-			<h2 class="type2-1">Instagram（新人情報）</h2>
-					
-				<div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-md-offset-1   text-center fh5co-heading animate-box">
-					<div style="position: relative; height: 16px; width: 100%; overflow: hidden; padding-top: 100%;">
-						<iframe src="//widgets-code.websta.me/w/7001f4603d51?ck=MjAxNi0xMi0wNFQwNzowMTozOS4wMDBa" class="websta-widgets"
-							allowtransparency="true" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-						WEBSTA WIDGETS - widgets.websta.me
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- END:SNS -->
+
 
 		<!-- START:About mitsubachi -->
 
@@ -172,7 +157,7 @@
 					</h2>
 					<div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-md-offset-1 text-left fh5co-heading animate-box about-missmrs">
 						<p>当店Mitsubachi(みつばち)は大阪市北区は南森町.扇町.天六.ミナミ(中央区)には長堀橋にある完全予約制のプライベートメンズエステです。</p>
-						<p>営業時間は午前12:00〜翌朝1:00迄(最終受付23:00)全室駅から近く各駅から2分以内の綺麗なシャワー完備の完全個室型になっております。</p>
+						<p>営業時間は午前12:00〜翌朝2:00迄(最終受付24:30)全室駅から近く各駅から2分以内の綺麗なシャワー完備の完全個室型になっております。</p>
 						<p>20代〜40代の愛嬌、品、マナーのある素敵な女性が多数在籍しており各セラピストによる貴方様に合った癒しを提供しています。</p>
 						<p>セラピストの技術向上の為、当店では研修も徹底している為、お好みの箇所などお気軽にお申し付け下さい。</p>
 						<p>当店は、リピーター様を大事にがコンセプトで受付時には、是非セラピストのタイプをお申し付け下さい。</p>

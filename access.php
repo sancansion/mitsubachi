@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>アクセス | みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>アクセス | みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="mitsubachi" />
 
@@ -43,7 +43,7 @@
 				<div class="row">
 					<a name="tenroku"></a>
 					<h1 class="type1-1">
-						<span class="icon-heart"> アクセス</span>
+						<span class=""> アクセス</span>
 					</h1>
 					<ul class="shop-list mb30">
 						<li>
@@ -52,15 +52,15 @@
 						<li>
 							<a href="access.php#ougi">＞＞扇町店へのアクセス</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="access.php#nanmori">＞＞南森町店へのアクセス</a>
 						</li>
 						<li>
 							<a href="access.php#nagahori">＞＞長堀橋店へのアクセス</a>
-						</li>
+						</li> -->
 					</ul>
 					<h2 class="type2-1">
-						<span class="icon-heart"> 天神橋六丁目店</span>
+						<span class=""> 天神橋六丁目店</span>
 					</h2>
 
 
@@ -75,7 +75,7 @@
 						<p>
 							店舗名：天神橋六丁目店
 							<br>
-							営業時間：11時～翌5時（最終受付3時30分）
+							営業時間：13時～翌2時（最終受付24時30分）
 							<br>
 							住所：大阪市北区天神橋6丁目
 							<br>
@@ -92,7 +92,7 @@
 
 					<a name="ougi"></a>
 					<h2 class="type2-1">
-						<span class="icon-heart"> 扇町店</span>
+						<span class=""> 扇町店</span>
 					</h2>
 
 					<div class="col-md-8  text-left fh5co-heading animate-box">
@@ -106,7 +106,7 @@
 						<p>
 							店舗名：扇町店
 							<br>
-							営業時間：11時～翌5時（最終受付3時30分）
+							営業時間：13時～翌2時（最終受付24時30分）
 							<br>
 							住所：大阪市北区天神橋3丁目
 							<br>
@@ -117,13 +117,13 @@
 				</div>
 			</div>
 		</div>
-		<div id="fh5co-couple">
+		<!-- <div id="fh5co-couple">
 			<div class="container">
 				<div class="row">
 
 					<a name="nanmori"></a>
 					<h2 class="type2-1">
-						<span class="icon-heart"> 南森町店</span>
+						<span class=""> 南森町店</span>
 					</h2>
 					<div class="col-md-8  text-left fh5co-heading animate-box">
 						<div class="ggmap">
@@ -136,7 +136,7 @@
 						<p>
 							店舗名：南森町店
 							<br>
-							営業時間：11時～翌5時（最終受付3時30分）
+							営業時間：13時～翌2時（最終受付24時30分）
 							<br>
 							住所：大阪市北区西天満5丁目
 							<br>
@@ -154,7 +154,7 @@
 
 					<a name="nagahori"></a>
 					<h2 class="type2-1">
-						<span class="icon-heart"> 長堀橋店</span>
+						<span class=""> 長堀橋店</span>
 					</h2>
 
 					<div class="col-md-8  text-left fh5co-heading animate-box">
@@ -168,7 +168,7 @@
 						<p>
 							店舗名：長堀橋店
 							<br>
-							営業時間：11時～翌5時（最終受付3時30分）
+							営業時間：13時～翌2時（最終受付24時30分）
 							<br>
 							住所：大阪市中央区島ノ内1-5-11
 							<br>
@@ -177,7 +177,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- END: -->
 		<!-- END:Main -->
 

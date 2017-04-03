@@ -57,10 +57,10 @@
 				<div class="row row-bottom-padded-md">
 
 					<h1 class="type1-1">
-						<span class="icon-heart"> セラピスト紹介</span>
+						<span class=""> セラピスト紹介</span>
 					</h1>
 					<h2 class="type2-1">
-						<span class="icon-heart"> Miss</span>
+						<span class=""> Miss</span>
 					</h2>
 					<div class="col-md-12">
 						<?php
@@ -130,7 +130,7 @@ echo <<<EOF
 	<figure class="therapist-img" data-animate-effect="fadeIn" style="background-image: url({$img_updir}/thumb_{$lines_array[$i][0]}.{$lines_array[$i][3]});">
 		<a href="{$img_updir}/{$lines_array[$i][0]}.{$lines_array[$i][3]}" data-size="1000x665">
 			<img src="{$img_updir}/thumb_{$lines_array[$i][0]}.{$lines_array[$i][3]}" alt="" style="display:none" />
-			<span class="case-studies-summary"> {$lines_array[$i][2]} ({$lines_array[$i][6]})</span>
+			<span class="case-studies-summary"> {$lines_array[$i][2]} ({$lines_array[$i][5]})</span>
 		</a>
 		<figcaption style="display:none;"> {$lines_array[$i][2]} 年齢：{$lines_array[$i][5]} / セラピスト経験：$experience / 体型： $looking</figcaption>
 	</figure>

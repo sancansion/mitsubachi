@@ -101,10 +101,10 @@
 		margin: 0;
 		padding: 0; /* for Opera8 */
 		background: #fff;
-		font-family: "繝偵Λ繧ｮ繝手ｧ偵ざ Pro W3", "Hiragino Kaku Gothic Pro", "繝｡繧､繝ｪ繧ｪ", Meiryo,
-			"�ｼｭ�ｼｳ �ｼｰ繧ｴ繧ｷ繝�繧ｯ", Verdana, Arial, Helvetica, sans-serif;
-		font-size: 14px; /* 窶ｻ繧ｵ繧､繝医↓繧医ｊ螟画峩縲�蝓ｺ譛ｬ縺ｯ12px */
-		line-height: 1.6; /* 窶ｻ繧ｵ繧､繝医↓繧医ｊ螟画峩縲�蝓ｺ譛ｬ縺ｯ1.6 */
+		font-family:  "Hiragino Kaku Gothic Pro", Meiryo,
+			 Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px; 
+		line-height: 1.6;
 		-webkit-text-size-adjust: 100%;
 	}
 
@@ -131,7 +131,7 @@
 		padding: 3px 8px;
 		font-size: 11px;
 		display: inline-block;
-		border: 1px solid #F6C;
+		border: 1px solid #FF8C00;
 		background: #FFF;
 		position: relative;
 		left: 0;
