@@ -1004,3 +1004,72 @@ ul.shop-list li {
 .icon-bee{
 	
 }
+
+
+/*--------------------------------
+Therapist
+---------------------------------*/
+
+.mybox{
+    background-color: #FFFFE0;
+    border-radius: 5px;
+    margin: 20px 5px;
+    padding: 30px 20px 20px 20px;
+    position: relative;
+    z-index: 0;
+    min-height:450px;
+}
+.mybox:before{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    content: '';
+    display: block;
+    margin: 4px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.mybox:after{
+    background-color: rgba(249,223,213,0.9);
+    background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0);
+    background-position: 0 0, 8px 8px;
+    background-size: 15px 15px;
+    border-left: 2px dotted rgba(0,0,0,0.1);
+    border-right: 2px dotted rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    content: 'Therapist';
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 5px 20px;
+    text-align: center;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+}
+
+.inner-box{
+    border-left: 4px solid #FA8072;
+    border-bottom: 1px solid #FA8072;
+    color: #FF8C00;
+   	margin:5px;
+   	padding:5px;
+    width:95%;
+}
+
+.inner-text{
+	padding-left:5px;
+	line-height:30px;
+}
+
+.margin0auto{
+	margin:0 auto;
+}
+
+

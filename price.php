@@ -42,11 +42,18 @@
 						料金システム（税込）
 					</span>
 				</h1>
+				<div class="limitted-price">
+				今月いっぱい オープン価格
+				</div><br>
 				<h2 class="type2-1">
 					<span class=""> コース ＆ オプション</span>
 				</h2>
+				
+				
 				<div class="block-02 cf pricelist">
+				
 					<div class="box">
+					
 						<dl>
 							<dt>
 								アロママッサージ

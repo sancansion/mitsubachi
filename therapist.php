@@ -59,10 +59,10 @@
 					<h1 class="type1-1">
 						<span class=""> セラピスト紹介</span>
 					</h1>
-					<h2 class="type2-1">
+<!-- 					<h2 class="type2-1">
 						<span class=""> Miss</span>
-					</h2>
-					<div class="col-md-12">
+					</h2> -->
+				
 						<?php
 //----------------------------------------------------------------------
 // 設定ファイルの読み込みとページ独自設定　※必要に応じて変更下さい(START)
@@ -81,17 +81,13 @@ $encodingType = 'UTF-8';
 	$pager = pagerOut($lines,$pagelength,$pagerDispLength);//ページャーを起動する
 ?>
 
-						<div class="pager_link">
-							<?php echo $pager['pager_res'];?>
-						</div>
+					
 
 
 
 
 
-
-<div class="my-gallery">
-<ul id="fh5co-gallery-list">
+	
 
 							<?php
 for($i = $pager['index']; ($i-$pager['index']) < $pagelength; $i++){
@@ -118,31 +114,42 @@ for($i = $pager['index']; ($i-$pager['index']) < $pagelength; $i++){
 		$looking = "むっちり";
 	}
 	
-	
+	if(($i % 3 ) == 0){ 
+		$start_tag = "<div class=\"container text margin0auto\"><div class=\"row\">";
+		$end_tag ="";
+	} else if (($i % 3) == 2){
+		$start_tag = "";
+		$end_tag ="</div></div>";
+	} else {
+		$start_tag = "";
+		$end_tag ="";
+	}
 
 
 //ギャラリー表示部（HTML部は自由に変更可）※デフォルトはサムネイルを表示。imgタグの「 thumb_ 」を取れば元画像を表示
 echo <<<EOF
 
 
-<li class="one-third  text-left fh5co-heading animate-box">
-
-	<figure class="therapist-img" data-animate-effect="fadeIn" style="background-image: url({$img_updir}/thumb_{$lines_array[$i][0]}.{$lines_array[$i][3]});">
-		<a href="{$img_updir}/{$lines_array[$i][0]}.{$lines_array[$i][3]}" data-size="1000x665">
-			<img src="{$img_updir}/thumb_{$lines_array[$i][0]}.{$lines_array[$i][3]}" alt="" style="display:none" />
-			<span class="case-studies-summary"> {$lines_array[$i][2]} ({$lines_array[$i][5]})</span>
-		</a>
-		<figcaption style="display:none;"> {$lines_array[$i][2]} 年齢：{$lines_array[$i][5]} / セラピスト経験：$experience / 体型： $looking</figcaption>
-	</figure>
-	</li>
-
+$start_tag
+	<div class="mybox col-md-3">
+		<div class="inner-box">セラピスト名</div>
+		<p class="inner-text">{$lines_array[$i][2]}</p>
+		<div class="inner-box">年齢</div>
+		<p class="inner-text">{$lines_array[$i][5]}</p>
+		<div class="inner-box">セラピスト経験</div>
+		<p class="inner-text">$experience</p>
+		<div class="inner-box">体型</div>
+		<p class="inner-text">$looking</p>
+		<div class="inner-box">お店からのコメント</div>
+		<p class="inner-text">{$lines_array[$i][3]}</p>
+	</div>
+$end_tag
 EOF;
   }
 
 }
 ?>
-</ul>
-</div>
+
 
 						<div class="pager_link">
 							<?php echo $pager['pager_res'];?>
@@ -156,10 +163,11 @@ EOF;
 
 				</div>
 			</div>
-		</div>
+		
 		<!-- End: Mrs-->
 	</div>
 	<!-- END:Main -->
+
 
 	<!-- START:footer -->
 	<?php include("common/footer.html"); ?>
