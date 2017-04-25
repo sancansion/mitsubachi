@@ -8,12 +8,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>料金システム | みちばつ | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 </title>
+<title>料金システム | ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="mitsubachi" />
+<meta name="author" content="Miss Mrs" />
 
-<meta name="description" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 " />
-<meta name="keywords" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 " />
+<meta name="description" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="keywords" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
 
 <!-- START:SNS meta-->
 <?php include("common/sns_meta.html"); ?>
@@ -38,22 +38,15 @@
 
 			<section id="contents">
 				<h1 class="type1-1">
-					<span class="">
+					<span class="icon-heart">
 						料金システム（税込）
 					</span>
 				</h1>
-				<div class="limitted-price">
-				今月いっぱい オープン価格
-				</div><br>
 				<h2 class="type2-1">
-					<span class=""> コース ＆ オプション</span>
+					<span class="icon-heart"> コース ＆ オプション</span>
 				</h2>
-				
-				
 				<div class="block-02 cf pricelist">
-				
 					<div class="box">
-					
 						<dl>
 							<dt>
 								アロママッサージ
@@ -61,7 +54,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>7,000</span>
+								<span>9,000</span>
 								yen
 							</dd>
 						</dl>
@@ -77,7 +70,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>9,000</span>
+								<span>11,000</span>
 								yen
 							</dd>
 						</dl>
@@ -91,7 +84,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>12,000</span>
+								<span>15,000</span>
 								yen
 							</dd>
 						</dl>
@@ -107,7 +100,7 @@
 								分コース
 							</dt>
 							<dd>
-								<span>15,000</span>
+								<span>19,000</span>
 								yen
 							</dd>
 						</dl>
@@ -153,7 +146,7 @@
 					<div class="block">
 						<br>
 						<h2 class="type2-1">
-							<span class=""> 注意事項</span>
+							<span class="icon-heart"> 注意事項</span>
 						</h2>
 
 						<ul>

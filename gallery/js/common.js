@@ -13,12 +13,12 @@ $(function(){
 });
 
 function check(){
-/*	if(document.form.upfile.value == ""){
+	if(document.form.upfile.value == ""){
 		window.alert('画像を選択してください');
 		return false;
 	}else{
 		return true;
-	}*/
+	}
 }
 
 function f5(){

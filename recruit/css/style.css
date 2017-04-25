@@ -14,7 +14,7 @@ body {
 	/*フォント指定*/
 	font-size: 14px; /*文字サイズ*/
 	line-height: 2; /*行間*/
-	background: #FAFAD2; /*背景色*/
+	background: #f8f0f1; /*背景色*/
 	-webkit-text-size-adjust: none;
 }
 
@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-	color: #FFA07A; /*マウスオン時の文字色（全体）*/
+	color: #f29c9f; /*マウスオン時の文字色（全体）*/
 	text-decoration: none; /*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
@@ -61,12 +61,12 @@ a:hover {
 /*ヘッダーブロック*/
 header {
 	width: 100%; /*横一杯使う為に100%指定*/
-	border-top: 5px solid #FA8072; /*上部の線の幅、線種、色*/
+	border-top: 5px solid #f29c9f; /*上部の線の幅、線種、色*/
 	background: #fff; /*背景色（古いブラウザ用）*/
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff),
 		to(#f8f0f1)); /*グラデーション*/
-	background: -webkit-linear-gradient(#fff, #FFFACD); /*同上*/
-	background: linear-gradient(#fff, #FFFACD); /*同上*/
+	background: -webkit-linear-gradient(#fff, #f8f0f1); /*同上*/
+	background: linear-gradient(#fff, #f8f0f1); /*同上*/
 }
 /*サイト幅にしたheader内のブロック*/
 header #inner {
@@ -125,17 +125,17 @@ header #tel span {
 #contact a {
 	text-decoration: none;
 	display: inline-block;
-	background: #FF7F50; /*背景色（古いブラウザ用）*/
+	background: #25b4b0; /*背景色（古いブラウザ用）*/
 	background: -webkit-gradient(linear, left top, left bottom, from(#F6C),
 		to(#F9C)); /*グラデーション*/
-	background: -webkit-linear-gradient(#FF7F50, #FFA07A); /*同上*/
-	background: linear-gradient(#FF7F50, #FFA07A); /*同上*/
+	background: -webkit-linear-gradient(#F6C, #F9C); /*同上*/
+	background: linear-gradient(#F6C, #F9C); /*同上*/
 	color: #FFF; /*文字色*/
 	padding: 4px 20px 8px; /*上、左右、下へのボックス内の余白*/
 	border-radius: 0px 0px 8px 8px; /*角丸のサイズ。左上、右上、右下、左下。*/
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 	/*右へ、下へ、ぼかし幅の順の影の設定。rgba以降は色の設定。「0,0,0」はrgbでの色で、黒。「0.2」が透明度で20%の意味。*/
-	
+	text-shadow: #25b4b0 0px -1px;
 	/*色、右へ、下へ、テキストの影の設定。下にマイナス設定をしているので上に影が入る事になる。*/
 }
 
@@ -200,7 +200,7 @@ header #tel span {
 }
 
 #menubar li a::first-letter {
-	border-left: 3px solid #FF7F50; /*左側のアクセント用ラインの幅、線種、色*/
+	border-left: 3px solid #f29c9f; /*左側のアクセント用ラインの幅、線種、色*/
 	padding-left: 10px; /*アクセントラインと文字の間にとる余白*/
 	padding-bottom: 18px;
 }
@@ -253,7 +253,7 @@ header #tel span {
 	border-left: solid 1px #ccc; /*左側への線の線種、幅、色*/
 	border-top: solid 1px #ccc; /*上側への線の線種、幅、色*/
 	border-right: solid 1px #ccc; /*右側への線の線種、幅、色*/
-	border-bottom: solid 5px #FF4500; /*下側への線の線種、幅、色*/
+	border-bottom: solid 5px #f29c9f; /*下側への線の線種、幅、色*/
 }
 /*mainコンテンツのh3タグの設定*/
 #main h3 {
@@ -267,7 +267,7 @@ header #tel span {
 }
 /*mainコンテンツのh3タグの１文字目への設定*/
 #main h3::first-letter {
-	border-left: 3px solid #FF7F50; /*左側のアクセント用ラインの幅、線種、色*/
+	border-left: 3px solid #f29c9f; /*左側のアクセント用ラインの幅、線種、色*/
 	padding-left: 10px; /*アクセントラインと文字の間にとる余白*/
 }
 /*mainコンテンツの段落タグ設定*/
@@ -328,7 +328,7 @@ header #tel span {
 /*ボックス内のh4タグの１文字目への設定*/
 #main section.list h4::first-letter, #main section.list2 h4::first-letter
 	{
-	border-left: 3px solid #FF7F50; /*左側の線の幅、線種、色*/
+	border-left: 3px solid #f29c9f; /*左側の線の幅、線種、色*/
 	padding-left: 10px; /*線と文字との余白*/
 }
 /*マウスオン時のボックス*/
@@ -381,7 +381,7 @@ header #tel span {
 }
 /*subコンテンツのh2タグの１文字目への設定*/
 #sub h2::first-letter {
-	border-left: 3px solid #FF7F50; /*左側のアクセント用ラインの幅、線種、色*/
+	border-left: 3px solid #f29c9f; /*左側のアクセント用ラインの幅、線種、色*/
 	padding-left: 10px;
 }
 

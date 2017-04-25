@@ -8,12 +8,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Miss Mrs" />
 
-<meta name="description" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
-<meta name="keywords" content="みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="description" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="keywords" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
 
 <!-- START:SNS meta-->
 <?php include("common/sns_meta.html"); ?>
@@ -26,6 +26,9 @@
 <body>
 
 	<div class="fh5co-loader"></div>
+	<!-- START:Facebook js -->
+	<?php include("common/facebook_js.html"); ?>
+	<!-- END:Facebook js -->
 	<div id="page">
 
 
@@ -36,10 +39,10 @@
 		<!-- START:Main -->
 		<div id="container">
 			<h1 class="type1-1">
-				<span> セラピストさん大募集!!</span>
+				<span class="icon-heart"> セラピストさん大募集!!</span>
 			</h1>
 			<h2 class="type2-1">
-				<span> 求人情報</span>
+				<span class="icon-heart"> 求人情報</span>
 			</h2>
 
 			<div class="row">
