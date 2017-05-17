@@ -52,9 +52,7 @@
 						<li>
 							<a href="access.php#ougi">＞＞扇町店へのアクセス</a>
 						</li>
-						<li>
-							<a href="access.php#nanmori">＞＞南森町店へのアクセス</a>
-						</li>
+						
 						<li>
 							<a href="access.php#nagahori">＞＞長堀橋店へのアクセス</a>
 						</li>
@@ -117,38 +115,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="fh5co-couple">
-			<div class="container">
-				<div class="row">
-
-					<a name="nanmori"></a>
-					<h2 class="type2-1">
-						<span class="icon-heart"> 南森町店</span>
-					</h2>
-					<div class="col-md-8  text-left fh5co-heading animate-box">
-						<div class="ggmap">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.286788221637!2d135.50607851523222!3d34.69794578043523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6c2e4d9bef5%3A0x2b0eef25a7bd4448!2z44CSNTMwLTAwNDcg5aSn6Ziq5bqc5aSn6Ziq5biC5YyX5Yy66KW_5aSp5rqA77yV5LiB55uu77yY4oiS77yR!5e0!3m2!1sja!2sjp!4v1481192879348"
-								width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="col-md-4  text-left fh5co-heading animate-box">
-						<p>
-							店舗名：南森町店
-							<br>
-							営業時間：11時～翌5時（最終受付3時30分）
-							<br>
-							住所：大阪市北区西天満5丁目
-							<br>
-							大阪市営地下鉄・堺筋線 谷町線「南森町駅」1番出口から徒歩3分
-						</p>
-						<img src="images/minamimorimachi.jpg">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-couple">
+		
+			<div id="fh5co-couple">
 			<div class="container">
 				<div class="row">
 
@@ -160,7 +128,7 @@
 					<div class="col-md-8  text-left fh5co-heading animate-box">
 						<div class="ggmap">
 							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.250418456839!2d135.5079651152315!3d34.67362878044139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e73ec1341fb1%3A0x8ef9d2a41c81608c!2z44CSNTQyLTAwODIg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65bO25LmL5YaF77yR5LiB55uu77yV4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1481193403019"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2431568839784!2d135.50569311477733!3d34.67381208044133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e73e7669c1a9%3A0x182cc9cbdac47795!2z5pel5pysLCDjgJI1NDItMDA4MiDlpKfpmKrlupzlpKfpmKrluILkuK3lpK7ljLrls7bkuYvlhoXvvJHkuIHnm67vvJHvvJXiiJLvvJHvvJE!5e0!3m2!1sja!2sus!4v1494226954350"
 								width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
 						</div>
 					</div>
@@ -170,7 +138,7 @@
 							<br>
 							営業時間：11時～翌5時（最終受付3時30分）
 							<br>
-							住所：大阪市中央区島ノ内1-5-11
+							住所：大阪市中央区島ノ内1-15-11
 							<br>
 						</p>
 						<img src="images/nagahori.jpg">

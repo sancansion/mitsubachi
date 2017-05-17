@@ -38,29 +38,18 @@
 
 			<section id="contents">
 				<h1 class="type1-1">
-					<span class="icon-heart">
-						料金システム（税込）
-					</span>
+
+					<span> 料金システム（税込） </span>
 				</h1>
+				<div class="">
+					<span style="font-size: 14px; color: #FF8C00;">※セラピストにより料金が異なりますので受付時にご確認ください！ </span>
+				</div>
+				<br>
 				<h2 class="type2-1">
-					<span class="icon-heart"> コース ＆ オプション</span>
+					<span> コース ＆ オプション</span>
 				</h2>
 				<div class="block-02 cf pricelist">
-					<div class="box">
-						<dl>
-							<dt>
-								アロママッサージ
-								<span class="time">60</span>
-								分コース
-							</dt>
-							<dd>
-								<span>9,000</span>
-								yen
-							</dd>
-						</dl>
-						<p>※60分コースは時間の都合上、背面のみの施術となりますので予めご了承ください。</p>
-					</div>
-
+					
 					<div class="box">
 						<div class="recommend">オススメ</div>
 						<dl>
@@ -70,11 +59,12 @@
 								分コース
 							</dt>
 							<dd>
-								<span>11,000</span>
+								<span>9,000〜</span>
 								yen
 							</dd>
 						</dl>
-						<p>※120分以上のコースはセラピストオリジナルメニューを実施します。</p>
+						<p>※セラピストにより料金が異なりますので受付時にご確認ください！
+						<br>※120分以上のコースはセラピストオリジナルメニューを実施します。</p>
 					</div>
 					<div class="box ">
 						<dl>
@@ -84,11 +74,12 @@
 								分コース
 							</dt>
 							<dd>
-								<span>15,000</span>
+								<span>12,000〜</span>
 								yen
 							</dd>
 						</dl>
-						<p>※120分以上のコースはセラピストオリジナルメニューを実施します。</p>
+						<p>セラピストにより料金が異なりますので受付時にご確認ください！
+						<br>※120分以上のコースはセラピストオリジナルメニューを実施します。</p>
 					</div>
 					<div class="box ">
 						<em class="recommend">NEW!!</em>
@@ -96,15 +87,16 @@
 						<dl>
 							<dt>
 								アロママッサージ
-								<span class="time">150</span>
+								<span class="time">150〜</span>
 								分コース
 							</dt>
 							<dd>
-								<span>19,000</span>
+								<span>15,000〜</span>
 								yen
 							</dd>
 						</dl>
-						<p>※120分以上のコースはセラピストオリジナルメニューを実施します。</p>
+						<p>※セラピストにより料金が異なりますので受付時にご確認ください！<br>
+						※120分以上のコースはセラピストオリジナルメニューを実施します。</p>
 					</div>
 
 					<div class="box ">
@@ -116,11 +108,11 @@
 								分コース
 							</dt>
 							<dd>
-								<span>5,000</span>
+								<span>5,000〜</span>
 								yen
 							</dd>
 						</dl>
-						<p></p>
+						<p>※セラピストにより料金が異なりますので受付時にご確認ください！</p>
 					</div>
 
 
@@ -146,7 +138,7 @@
 					<div class="block">
 						<br>
 						<h2 class="type2-1">
-							<span class="icon-heart"> 注意事項</span>
+							<span> 注意事項</span>
 						</h2>
 
 						<ul>
@@ -172,7 +164,7 @@
 
 				</div>
 			</section>
-		
+
 		</div>
 
 

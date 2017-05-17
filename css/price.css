@@ -5,16 +5,25 @@
 	color: #2e3436;
 	font-size:18px;
 }
+.limitted-price {
+    color: #2e3436;
+    background: linear-gradient(transparent 30%, #FFD700 20%);
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 10px auto;
+}
 
 @media screen and (min-width: 768px) {
 	body {
 		margin: 0;
 		padding: 0; /* for Opera8 */
 		background: #fff;
-		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
-			"ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
-		font-size: 14px; /* ※サイトにより変更　基本は12px */
-		line-height: 1.6; /* ※サイトにより変更　基本は1.6 */
+		font-family: , "Hiragino Kaku Gothic Pro, Meiryo,
+		, Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px; 
+		line-height: 1.6; 
 		-webkit-text-size-adjust: 100%;
 	}
 
@@ -101,10 +110,10 @@
 		margin: 0;
 		padding: 0; /* for Opera8 */
 		background: #fff;
-		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
-			"ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
-		font-size: 14px; /* ※サイトにより変更　基本は12px */
-		line-height: 1.6; /* ※サイトにより変更　基本は1.6 */
+		font-family:  "Hiragino Kaku Gothic Pro", Meiryo,
+			 Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px; 
+		line-height: 1.6; 
 		-webkit-text-size-adjust: 100%;
 	}
 
