@@ -22,9 +22,9 @@ article {
 	box-shadow: 0px 2px 5px #544436; /*同上*/
 	background-color: #FFF; /*背景色（古いブラウザだとここの色のみが出ます）*/
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF),
-		to(#FFE4E1)); /*グラデーション*/
-	background-image: -webkit-linear-gradient(#FFF, #FFE4E1); /*同上*/
-	background-image: linear-gradient(#FFF, #FFE4E1); /*同上*/
+		to(#FFFACD)); /*グラデーション*/
+	background-image: -webkit-linear-gradient(#FFF, #FFFACD); /*同上*/
+	background-image: linear-gradient(#FFF, #FFFACD); /*同上*/
 	padding: 15px; /*ボックス内の余白*/
 	float: left;
 	margin: 0px 9px 1em;
@@ -121,14 +121,13 @@ article ul li p {
 .btn-recruit a {
 	display: inline-block;
 	font-size: 14px;
-	background: #F6C; /*背景色（古いブラウザ用）*/
+	background: #FF7F50; /*背景色（古いブラウザ用）*/
 	color: #FFF; /*文字色*/
 	padding: 4px 20px 4px; /*上、左右、下へのボックス内の余白*/
 	border-radius: 8px 8px 8px 8px; /*角丸のサイズ。左上、右上、右下、左下。*/
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 	/*右へ、下へ、ぼかし幅の順の影の設定。rgba以降は色の設定。「0,0,0」はrgbでの色で、黒。「0.2」が透明度で20%の意味。*/
-	text-shadow: #25b4b0 0px -1px;
-	background: #F6C;
+	background: #FF7F50;
 	text-decoration: none;
 	/*色、右へ、下へ、テキストの影の設定。下にマイナス設定をしているので上に影が入る事になる。*/
 }
@@ -136,7 +135,7 @@ article ul li p {
 
 strong {
 color:#2e3436;
-  background: linear-gradient(transparent 30%, #fbd 30%);
+  background: linear-gradient(transparent 30%, #FFD700 30%);
   font-weight:normal;
   font-size:16px;
   line-height:18px;

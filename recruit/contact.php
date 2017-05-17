@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>お問い合わせ | ミスミセス | 求人 | セラピスト大募集 | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>お問い合わせ | みつばち | 求人 | セラピスト大募集 | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="大阪のメンズエステ ミスミセス ご好評についてセラピストさん大募集">
-<meta name="keywords" content="ミスミセス,求人,セラピスト大募集,メンズエステ,大阪,天神橋六丁目,扇町,南森町,長堀橋">
+<meta name="description" content="大阪のメンズエステ みつばち ご好評についてセラピストさん大募集">
+<meta name="keywords" content="みつばち,求人,セラピスト大募集,メンズエステ,大阪,天神橋六丁目,扇町,南森町,長堀橋">
 <link rel="stylesheet" href="css/slide.css">
 <link rel="stylesheet" href="css/style.css">
 

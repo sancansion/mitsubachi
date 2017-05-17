@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>よくある質問 | ミスミセス | 求人 | セラピスト大募集 | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>よくある質問 | みつばち | 求人 | セラピスト大募集 | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="大阪のメンズエステ ミスミセス ご好評についてセラピストさん大募集">
-<meta name="keywords" content="ミスミセス,求人,セラピスト大募集,メンズエステ,大阪,天神橋六丁目,扇町,南森町,長堀橋">
+<meta name="description" content="大阪のメンズエステ みつばち ご好評についてセラピストさん大募集">
+<meta name="keywords" content="みつばち,求人,セラピスト大募集,メンズエステ,大阪,天神橋六丁目,扇町,南森町,長堀橋">
 <link rel="stylesheet" href="css/slide.css">
 <link rel="stylesheet" href="css/style.css">
 
@@ -36,7 +36,7 @@
 				<p>
 					働きたいけど、ちょっと不安…。
 					<br>
-					そんな貴女のミスミセスのお仕事に関する疑問にお答えいたします。
+					そんな貴女のみつばちのお仕事に関する疑問にお答えいたします。
 				</p>
 
 				<h3>Ｑ.技術講習は無料で受けれるのですか？</h3>
@@ -67,7 +67,7 @@
 
 
 				<h3>Ｑ.ノルマ・罰金はありますか？</h3>
-				<p>Ａ．ミスミセスではノルマ・罰金は一切ございません！</p>
+				<p>Ａ．みつばちではノルマ・罰金は一切ございません！</p>
 
 
 			</section>

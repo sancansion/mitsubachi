@@ -50,156 +50,7 @@ if ( (isset($_POST['submit']) || isset($_POST['edit_submit']) ) && !isset($_POST
 	//各記事にユニークなIDを付与　uniqid（PHP3以下）が無ければ年月日時分秒
 	$id = generateID();
 		
-	//----------------------------------------------------------------------
-	//  画像縮小保存処理 GD必須 (START)
-	//----------------------------------------------------------------------
-	
-		if(is_uploaded_file($_FILES["upfile"]["tmp_name"])){
-			if ($_FILES["upfile"]["size"] < $maxImgSize) {
-				$imgType = $_FILES['upfile']['type'];
-				if ($imgType == 'image/gif' || strpos($_FILES['upfile']['name'],'.gif') !== false || strpos($_FILES['upfile']['name'],'.GIF') !== false) {
-					$extension = 'gif';
-					$image = ImageCreateFromGIF($_FILES['upfile']['tmp_name']); //GIFファイルを読み込む
-				} else if ($imgType == 'image/png' || $imgType == 'image/x-png' || strpos($_FILES['upfile']['name'],'.png') !== false || strpos($_FILES['upfile']['name'],'.PNG') !== false) {
-					$extension = 'png';
-					$image = ImageCreateFromPNG($_FILES['upfile']['tmp_name']); //PNGファイルを読み込む
-				} else if ($imgType == 'image/jpeg' || $imgType == 'image/pjpeg' || strpos($_FILES['upfile']['name'],'.jpg') !== false || strpos($_FILES['upfile']['name'],'.JPG') !== false || strpos($_FILES['upfile']['name'],'.jpeg') !== false || strpos($_FILES['upfile']['name'],'.JPEG') !== false) {
-					$extension = 'jpg';
-					$image = ImageCreateFromJPEG($_FILES['upfile']['tmp_name']); //JPEGファイルを読み込む
-					
-					//画像の回転（iPhoneの縦写真が横写真として保存されてしまう問題の対策）
-					if(function_exists('exif_read_data')){
-						if($exif_datas = @exif_read_data($_FILES['upfile']['tmp_name'])){
-							if(isset($exif_datas['Orientation'])){
-								  if($exif_datas['Orientation'] == 6){
-									 $image = imagerotate($image, 270, 0);
-								  }elseif($exif_datas['Orientation'] == 3){
-									 $image = imagerotate($image, 180, 0);
-								  }
-							}
-						}
-					}
-					
-					
-				} else if ($extension == '') {
-					exit("<center>【許可されていない拡張子です。jpg、gif、pngのいずれかのみです】<br /><br /><a href='admin.php'>戻る&gt;&gt;</a></center>");
-				}
-					
-				if(strpos($id,'no_disp') !== false) {
-				  $file_id = str_replace('no_disp','',$id);
-				  $filename = $file_id.".".$extension;//ファイル名を指定
-				}else{
-				  $filename = $id.".".$extension;//ファイル名を指定
-				}
-				
-				//拡張子違いのファイルを削除
-				fileDelFunc($img_updir,$id);
-				
-				$img_file_path = $img_updir.'/'.$filename;//ファイルパスを指定
-				$img_file_path_thumb = $img_updir.'/'.'thumb_'.$filename;//サムネイルファイルパスを指定
-				  
-				//読み込んだ画像のサイズ
-				$width = ImageSX($image); //横幅（ピクセル）
-				$height = ImageSY($image); //縦幅（ピクセル）
-				
-				if($width>$imgWidthHeight or $height>$imgWidthHeight){//画像の縦または横が$imgWidthHeightより大きい場合は縮小して保存
-					if ($height < $width){//横写真の場合の処理
-						$new_width = $imgWidthHeight; //幅指定px
-						$rate = $new_width / $width; //縦横比を算出
-						$new_height = $rate * $height;
-						
-						//サムネイル用処理
-						$new_width_thumb = $imgWidthHeightThumb;//高さ指定px
-						$rate_thumb = $new_width_thumb / $width;//縦横比を算出
-						$new_height_thumb = $rate_thumb * $height;
-					
-					}else{//縦写真の場合の処理
-						$new_height = $imgWidthHeight; //高さ指定px
-						$rate = $new_height / $height; //縦横比を算出
-						$new_width = $rate * $width;
-						
-						//サムネイル用処理
-						$new_height_thumb = $imgWidthHeightThumb; //高さ指定px
-						$rate_thumb = $new_height_thumb / $height; //縦横比を算出
-						$new_width_thumb = $rate_thumb * $width;
-					}
-					
-					$new_image = ImageCreateTrueColor($new_width, $new_height);
-					$new_image_thumb = ImageCreateTrueColor($new_width_thumb, $new_height_thumb);//サムネイル作成
-					
-					ImageCopyResampled($new_image,$image,0,0,0,0,$new_width,$new_height,$width,$height);
-					ImageCopyResampled($new_image_thumb,$image,0,0,0,0,$new_width_thumb,$new_height_thumb,$width,$height);//サムネイル作成
-				  
-					if($extension == 'jpg'){
-						
-						if(!@is_int($img_quality)) $img_quality = 80;//画質に数字以外の無効な文字列が指定されていた場合のデフォルト値
-						ImageJPEG($new_image, $img_file_path, $img_quality); //3つ目の引数はクオリティー（0～100）
-						ImageJPEG($new_image_thumb, $img_file_path_thumb, $img_quality); //サムネイル作成
-					}
-					elseif ($extension == 'gif') {
-						ImageGIF($new_image, $img_file_path);//環境によっては使えない
-						ImageGIF($new_image_thumb, $img_file_path_thumb);//サムネイル作成
-					}
-					elseif ($extension == 'png') {
-						ImagePNG($new_image, $img_file_path);
-						ImagePNG($new_image_thumb, $img_file_path_thumb);//サムネイル作成
-					}
-					  
-				  //メモリを解放
-				  imagedestroy ($image); //イメージIDの破棄
-				  imagedestroy ($new_image); //元イメージIDの破棄
-				  imagedestroy ($new_image_thumb); //サムネイル元イメージIDの破棄
-				  
-					}else{//画像が$imgWidthHeightより小さい場合はそのまま保存
-					move_uploaded_file($_FILES['upfile']['tmp_name'],$img_file_path);
-					  
-						//----------------------------------------------------------------------
-						//  サムネイル生成処理  (START)
-						//----------------------------------------------------------------------
-						if($width>$imgWidthHeightThumb or $height>$imgWidthHeightThumb){//画像の縦または横がサムネイル指定サイズより大きい場合は生成
-						  if ($height < $width){//横写真の場合の処理
-						  
-							  $new_width_thumb = $imgWidthHeightThumb;//高さ指定px
-							  $rate_thumb = $new_width_thumb / $width;//縦横比を算出
-							  $new_height_thumb = $rate_thumb * $height;
-						  
-						  }else{//縦写真の場合の処理
-						  
-							  $new_height_thumb = $imgWidthHeightThumb; //高さ指定px
-							  $rate_thumb = $new_height_thumb / $height; //縦横比を算出
-							  $new_width_thumb = $rate_thumb * $width;
-						  }
-						  $new_image_thumb = ImageCreateTrueColor($new_width_thumb, $new_height_thumb);//サムネイル作成
-						  ImageCopyResampled($new_image_thumb,$image,0,0,0,0,$new_width_thumb,$new_height_thumb,$width,$height);//サムネイル作成
-						  
-							if($extension == 'jpg'){
-								if(!@is_int($img_quality)) $img_quality = 80;//画質に数字以外の無効な文字列が指定されていた場合のデフォルト値
-								ImageJPEG($new_image_thumb, $img_file_path_thumb, $img_quality); //サムネイル作成
-							}
-							elseif($extension == 'gif') {
-								ImageGIF($new_image_thumb, $img_file_path_thumb);//サムネイル作成
-							}
-							elseif($extension == 'png') {
-								ImagePNG($new_image_thumb, $img_file_path_thumb);//サムネイル作成
-							}
-						  imagedestroy ($new_image_thumb); //サムネイル元イメージIDの破棄
-						}else{
-							//サムネイルが設定サイズより小さい場合はそのまま保存
-							copy($img_file_path,$img_file_path_thumb);
-						}
-						//----------------------------------------------------------------------
-						//  サムネイル生成処理  (END)
-						//----------------------------------------------------------------------
-					  
-					}
-					  @chmod($img_file_path, 0666);
-					  @chmod($img_file_path_thumb, 0666);
-			
-			}else{
-			  $maxImgSize = number_format($maxImgSize);
-			  exit("<center>【画像がファイルサイズオーバーです。{$maxImgSize}バイト以下にして下さい】<br /><br /><a href='admin.php'>戻る&gt;&gt;</a></center>");
-			}
-		}
+
 	//----------------------------------------------------------------------
 	//  画像縮小保存処理 GD必須 (END)
 	//----------------------------------------------------------------------
@@ -209,20 +60,18 @@ if ( (isset($_POST['submit']) || isset($_POST['edit_submit']) ) && !isset($_POST
 		if(isset($_POST['title'])){
 		  $title = replace_func($_POST['title']);
 		}
-		
-		if($extension == ""){
-			$extension = $_POST['extension_type'];
+
+		if(isset($_POST['desc'])){
+		  $desc = replace_func($_POST['desc']);
 		}
+		
+		
 		//並び順。デフォルトは空にする
 		$dspno = "1";
 		if(isset($_POST['dspno'])){
 		  $dspno = $_POST['dspno'];
 		}
 
-		$type = 1;
-		if(isset($_POST['type'])){
-		  $type = replace_func($_POST['type']);
-		}
 
 		$age = "";
 		if(isset($_POST['age'])){
@@ -243,7 +92,8 @@ if ( (isset($_POST['submit']) || isset($_POST['edit_submit']) ) && !isset($_POST
 		
 		$fp = @fopen($file_path, "r+b") or die("fopen Error!!DESUYO--!!!");
 		//$writeData = $id  . "," .$up_ymd. "," .$title. "," .$extension. ",".$dspno.",". "\n";
-		$writeData = $id  . "," .$up_ymd. "," .$title. "," .$extension. ",".$dspno."," .$type."," .$age."," .$experience. "," .$looking. ",". "\n";
+//		$writeData = $id  . "," .$up_ymd. "," .$title. "," .$extension. ",".$dspno."," .$age."," .$experience. "," .$looking. ",". "\n";
+		$writeData = $id  . "," .$up_ymd. "," .$title. "," .$desc. ",".$dspno."," .$age."," .$experience. "," .$looking. ",". "\n";
 
 		 // 俳他的ロック
 		if(flock($fp, LOCK_EX)){
@@ -381,53 +231,34 @@ if($mode == 'edit'){
 <input type="hidden" name="extension_type" value="<?php echo $lines_array[3];?>" />
 <input type="hidden" name="dspno" value="<?php if(!empty($lines_array[4])) echo $lines_array[4];?>" />
 <?php if(strpos($id,'no_disp') !== false) $id = str_replace('no_disp','',$id); ?>
-<p class="taC target_photo"><a href="<?php echo $img_updir.'/'.$id.'.'.$lines_array[3];?>" class="photo"><img src="<?php echo $img_updir.'/'.$id.'.'.$lines_array[3];?>" height="200" /></a></p>
 <?php $up_ymd_array = explode("/",$lines_array[1]);?>
-
-0<?php echo $lines_array[0]?><br>
-1<?php echo $lines_array[1]?><br>
-2<?php echo $lines_array[2]?><br>
-3<?php echo $lines_array[3]?><br>
-4<?php echo $lines_array[4]?><br>
-5<?php echo $lines_array[5]?><br>
-6<?php echo $lines_array[6]?><br>
-7<?php echo $lines_array[7]?>
 
 <p>日付：<input type="text" name="year" size="5" maxlength="4" value="<?php echo $up_ymd_array[0];?>" /> 年 <input type="text" name="month" size="2" maxlength="2" value="<?php echo $up_ymd_array[1];?>" /> 月 <input type="text" name="day" size="2" maxlength="2" value="<?php echo $up_ymd_array[2];?>" /> 日　※半角数字のみ</p>
 
-<h3>写真タイトル、説明など（htmlタグ不可） ※未入力も可</h3><p>※画像拡大時、及びaltに反映されます。
-<br />
-<textarea name="title" cols="60" rows="3"><?php echo $lines_array[2];?></textarea>
-<br />
-
-
-<br>
-<p>Miss Or Mrs<br>
-	<input type="radio" name="type" value="1"  <?php if($lines_array[5] == 1){ print "checked";}?>> Miss
-	<input type="radio" name="type" value="2" <?php if($lines_array[5] == 2){ print "checked";}?>> Mrs
-</p>
-
-<p>年齢：<input type="text" name="age" size="2" maxlength="2" value="<?php echo $lines_array[6]?>" /> 
+<h3>セラピスト名</h3>
+<input type="text" name="title" value="<?php echo $lines_array[2];?>">
+<br /><br />
+<h3>セラピスト説明</h3>
+<textarea name="desc" cols="60" rows="3"><?php echo $lines_array[3];?></textarea>
+<br /><br />
+<p>年齢：<input type="text" name="age" size="2" maxlength="2" value="<?php echo $lines_array[5]?>" /> 
 </p>
 
 <p>経験有無<br>
-	<input type="radio" name="experience" value="1" <?php if($lines_array[7] == 1){ print "checked";}?>> あり
-	<input type="radio" name="experience" value="2" <?php if($lines_array[7] == 2){ print "checked";}?>> なし
+	<input type="radio" name="experience" value="1" <?php if($lines_array[6] == 1){ print "checked";}?>> あり
+	<input type="radio" name="experience" value="2" <?php if($lines_array[6] == 2){ print "checked";}?>> なし
 </p>
 
 <p>経験有無<br>
-	<input type="radio" name="looking" value="1" <?php if($lines_array[8] == 1){ print "checked";}?>> スレンダー
-	<input type="radio" name="looking" value="2" <?php if($lines_array[8] == 2){ print "checked";}?>> 普通
-	<input type="radio" name="looking" value="3" <?php if($lines_array[8] == 3){ print "checked";}?>> むっちり
+	<input type="radio" name="looking" value="1" <?php if($lines_array[7] == 1){ print "checked";}?>> スレンダー
+	<input type="radio" name="looking" value="2" <?php if($lines_array[7] == 2){ print "checked";}?>> 普通
+	<input type="radio" name="looking" value="3" <?php if($lines_array[7] == 3){ print "checked";}?>> むっちり
 </p>
 
 <p>■削除チェック　<input type="checkbox" name="del" value="true" /> <span style="font-size:13px;color:#666">※削除する場合はこちらにチェックを入れて「変更」ボタンを押してください。データ（画像データ含む）は完全に削除されます。</span></p>
 
-<h3>■画像アップロード（jpg、gif、pngのみ）</h3>
-<p>※事前に縮小の必要はありません。横写真または縦写真とも設定ファイル（config.php）で設定した幅、または高さに自動縮小されます。現在は<span style="color:red"><?php $imgWidthHeight;?></span>px<br />※日本語ファイル名でも問題ありません。自動で半角英数字にリネームされます。アニメーションgifは不可。
 <br />
-
-<input type="file" name="upfile" size="50" /> （MAX 5MB）<br /></p>
+<br /></p>
 <p align="center"><input type="submit" class="submit_btn" name="edit_submit" value="　変更、または削除実行　" /></p>
 <?php
 //----------------------------------------------------------------------
@@ -439,19 +270,14 @@ if($mode == 'edit'){
 //----------------------------------------------------------------------
 ?>
 <p>日付：<input type="text" name="year" size="5" maxlength="4" value="<?php echo @date("Y",time());?>" /> 年 <input type="text" name="month" size="2" maxlength="2" value="<?php echo @date("n",time());?>" /> 月 <input type="text" name="day" size="2" maxlength="2" value="<?php echo @date("j",time());?>" /> 日　※半角数字のみ</p>
-<h3>写真タイトル、説明など（htmlタグ不可） </h3>
-<p>※未入力も可　※画像拡大時、及びaltに反映されます。<br />
-<textarea name="title" cols="60" rows="3"></textarea>
-</p>
-<h3>画像アップロード（jpg、gif、pngのみ）</h3><p>
-※事前に縮小の必要はありません。横写真または縦写真とも設定ファイル（config.php）で設定した幅、または高さに自動縮小されます。現在は<span style="color:red"><?php echo $imgWidthHeight;?></span>px<br />※日本語ファイル名でも問題ありません。自動で半角英数字にリネームされます。アニメーションgifは不可<br />
+<h3>セラピスト名</h3>
+<input type="text" name="title" cols="60" rows="3"></textarea>
+<br /><br />
+<h3>セラピスト説明</h3>
 
+<textarea name="desc" cols="60" rows="3"></textarea>
 
-<p>Miss Or Mrs<br>
-	<input type="radio" name="type" value="1" /> Miss
-	<input type="radio" name="type" value="2" /> Mrs
-</p>
-
+<br /><br />
 <p>年齢：<input type="text" name="age" size="2" maxlength="2" value="" /> 
 </p>
 
@@ -466,7 +292,7 @@ if($mode == 'edit'){
 	<input type="radio" name="looking" value="3" /> むっちり
 </p>
 
-<input type="file" name="upfile" size="50" /> （MAX 5MB）</p>
+
 <p align="center"><input type="submit" class="submit_btn" name="submit" value="　新規登録　" onclick="return check()"/></p>
 <?php
 //----------------------------------------------------------------------
@@ -477,14 +303,7 @@ if($mode == 'edit'){
 </form>
 <div class="positionBase">
 <h2>登録画像一覧　<?php if($mode == 'img_order') echo '【並び替えモード】';?></h2>
-<div id="acrbtn">【取り扱い説明書】</div>
-<div id="commentDescription" style="display:none">
-<p>※デフォルトは登録順です。「並び替えモード」にて並び順の変更が可能です。ドラッグ＆ドロップし、「並び替えを反映する」ボタンを押して下さい。<br />
-※画像の変更が反映されない場合はブラウザのキャッシュが原因です。→のボタンまたはF5キーで更新してください。
-<button onclick="f5()">更新する</button>
-<br />※アップ画像は幅、または高さが現在サムネイルのサイズとして設定されている<span class="col19"><?php echo $imgWidthHeightThumb;?>px</span>以上である必要があります。（設定ファイルで変更可）
-</p>
-</div>
+
 
 <?php if($mode == 'img_order'){//並び替えモード時?>
 <div class="orderButton"><a href="?">通常モードへ</a></div>
@@ -525,22 +344,17 @@ for($i = $pager['index']; ($i-$pager['index']) < $pagelengthAdmin; $i++){
 		$lines_array[$i][3] = rtrim($lines_array[$i][3]);
 		$lines_array[$i][1] = ymd2format($lines_array[$i][1]);//日付フォーマットの適用
 		$alt_text = str_replace('<br />','',$lines_array[$i][2]);
-		if($lines_array[$i][5] == 1){
-			$type = "Miss.";
-		} else {
-			$type = "Mrs.";
-		}
 
-		if($lines_array[$i][7] == 1){
+		if($lines_array[$i][6] == 1){
 			$experience = "あり";
 		} else {
 			$experience = "なし";
 		}
 
 
-		if($lines_array[$i][8] == 1){
+		if($lines_array[$i][7] == 1){
 			$looking = "スレンダー";
-		} else if ($lines_array[$i][8] == 2){
+		} else if ($lines_array[$i][7] == 2){
 			$looking = "普通";
 		} else {
 			$looking = "むっちり";
@@ -555,11 +369,11 @@ echo <<<EOF
 {$lines_array[$i][1]} 
 <a class="photo" href="{$img_updir}/{$img_id}.{$lines_array[$i][3]}" 
 	title="
-	$type {$lines_array[$i][2]} ({$lines_array[$i][6]})
+  {$lines_array[$i][2]} ({$lines_array[$i][5]})
 	<br />
 	セラピスト経験：$experience / 体型：$looking
 	">
-<img src="{$img_updir}/thumb_{$img_id}.{$lines_array[$i][3]}" height="75" alt="{$lines_array[$i][2]}" title="{$alt_text}" /></a>
+</a>
 <a class="button" href="?mode=disp&id={$id}&page={$pager['pageid']}">表示する</a>
 <a class="button" href="?mode=edit&id={$id}&page={$pager['pageid']}">[編集・削除]</a>
 <div class="hidden_text">非表示中</div>
@@ -570,14 +384,28 @@ EOF;
 		}else{
 echo <<<EOF
 
-<li>{$lines_array[$i][1]}  
-<a class="photo" href="{$img_updir}/{$id}.{$lines_array[$i][3]}" 
-title="
-	$type {$lines_array[$i][2]} ({$lines_array[$i][6]})
-	<br />
-	セラピスト経験：$experience / 体型：$looking
-">
-<img src="{$img_updir}/thumb_{$id}.{$lines_array[$i][3]}" alt="{$lines_array[$i][2]}" height="75" title="{$alt_text}" /></a><a class="button" href="?mode=no_disp&id={$id}&page={$pager['pageid']}">非表示にする</a><a class="button" href="?mode=edit&id={$id}&page={$pager['pageid']}">編集・削除</a><input type="hidden" name="sort[]" value="{$id}" /></li>
+<li>登録・更新日:{$lines_array[$i][1]}  
+<p>
+【セラピスト名】<br />
+{$lines_array[$i][2]}
+<br />
+【セラピスト説明】<br />
+{$lines_array[$i][3]}
+<br />
+
+【年齢】<br />
+{$lines_array[$i][5]}
+<br />
+
+【セラピスト経験】<br />
+$experience 
+<br />
+ 【体型】<br />
+$looking</p>
+<br />
+<a class="button" href="?mode=no_disp&id={$id}&page={$pager['pageid']}">非表示にする</a>
+<a class="button" href="?mode=edit&id={$id}&page={$pager['pageid']}">編集・削除</a>
+<input type="hidden" name="sort[]" value="{$id}" /></li>
 
 EOF;
 		}

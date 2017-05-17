@@ -8,12 +8,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ミスセラピスト一覧 | ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋</title>
+<title>セラピスト一覧 | Mitsubachi | みつばち | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Miss Mrs" />
+<meta name="author" content="Mitsubachi" />
 
-<meta name="description" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
-<meta name="keywords" content="ミスミセス | メンズエステ | 大阪 | 天神橋六丁目 | 扇町 | 南森町 | 長堀橋" />
+<meta name="description" content="Mitsubachi | ミツバチ | メンズエステ | 大阪 | 天神橋六丁目 | 扇町" />
+<meta name="keywords" content="Mitsubachi | ミツバチ | メンズエステ | 大阪 | 天神橋六丁目 | 扇町" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -57,12 +57,12 @@
 				<div class="row row-bottom-padded-md">
 
 					<h1 class="type1-1">
-						<span class="icon-heart"> セラピスト紹介</span>
+						<span class=""> セラピスト紹介</span>
 					</h1>
-					<h2 class="type2-1">
-						<span class="icon-heart"> Miss</span>
-					</h2>
-					<div class="col-md-12">
+<!-- 					<h2 class="type2-1">
+						<span class=""> Miss</span>
+					</h2> -->
+				
 						<?php
 //----------------------------------------------------------------------
 // 設定ファイルの読み込みとページ独自設定　※必要に応じて変更下さい(START)
@@ -81,17 +81,13 @@ $encodingType = 'UTF-8';
 	$pager = pagerOut($lines,$pagelength,$pagerDispLength);//ページャーを起動する
 ?>
 
-						<div class="pager_link">
-							<?php echo $pager['pager_res'];?>
-						</div>
+					
 
 
 
 
 
-
-<div class="my-gallery">
-<ul id="fh5co-gallery-list">
+	
 
 							<?php
 for($i = $pager['index']; ($i-$pager['index']) < $pagelength; $i++){
@@ -102,51 +98,58 @@ for($i = $pager['index']; ($i-$pager['index']) < $pagelength; $i++){
 	if($encodingType!='UTF-8') $lines_array[$i][1]=mb_convert_encoding($lines_array[$i][1],"$encodingType",'UTF-8');
 	if($encodingType!='UTF-8') $lines_array[$i][2]=mb_convert_encoding($lines_array[$i][2],"$encodingType",'UTF-8');
 	$name = str_replace('<br />','',$lines_array[$i][2]);
-	if($lines_array[$i][5] == 1){
-		$type = "Miss.";
-	} else {
-		$type = "Mrs.";
-	}
 
-	if($lines_array[$i][7] == 1){
+
+	if($lines_array[$i][6] == 1){
 		$experience = "あり";
 	} else {
 		$experience = "なし";
 	}
 	
-	if($lines_array[$i][8] == 1){
+	if($lines_array[$i][7] == 1){
 		$looking = "スレンダー";
-	}else if($lines_array[$i][8] == 2){
+	}else if($lines_array[$i][7] == 2){
 		$looking = "普通";
 	} else {
 		$looking = "むっちり";
 	}
 	
-	
+	if(($i % 3 ) == 0){ 
+		$start_tag = "<div class=\"container text margin0auto\"><div class=\"row\">";
+		$end_tag ="";
+	} else if (($i % 3) == 2){
+		$start_tag = "";
+		$end_tag ="</div></div>";
+	} else {
+		$start_tag = "";
+		$end_tag ="";
+	}
 
-if($lines_array[$i][5] == 1){
+
 //ギャラリー表示部（HTML部は自由に変更可）※デフォルトはサムネイルを表示。imgタグの「 thumb_ 」を取れば元画像を表示
 echo <<<EOF
 
 
-<li class="one-third  text-left fh5co-heading animate-box">
-
-	<figure class="therapist-img" data-animate-effect="fadeIn" style="background-image: url({$img_updir}/thumb_{$lines_array[$i][0]}.{$lines_array[$i][3]});">
-		<a href="{$img_updir}/{$lines_array[$i][0]}.{$lines_array[$i][3]}" data-size="1000x665">
-			<img src="{$img_updir}/thumb_{$lines_array[$i][0]}.{$lines_array[$i][3]}" alt="" style="display:none" />
-			<span class="case-studies-summary">$type {$lines_array[$i][2]} ({$lines_array[$i][6]})</span>
-		</a>
-		<figcaption style="display:none;">$type {$lines_array[$i][2]} 年齢：{$lines_array[$i][6]} / セラピスト経験：$experience / 体型： $looking</figcaption>
-	</figure>
-	</li>
-
+$start_tag
+	<div class="mybox col-md-3">
+		<div class="inner-box">セラピスト名</div>
+		<p class="inner-text">{$lines_array[$i][2]}</p>
+		<div class="inner-box">年齢</div>
+		<p class="inner-text">{$lines_array[$i][5]}</p>
+		<div class="inner-box">セラピスト経験</div>
+		<p class="inner-text">$experience</p>
+		<div class="inner-box">体型</div>
+		<p class="inner-text">$looking</p>
+		<div class="inner-box">お店からのコメント</div>
+		<p class="inner-text">{$lines_array[$i][3]}</p>
+	</div>
+$end_tag
 EOF;
   }
-}
+
 }
 ?>
-</ul>
-</div>
+
 
 						<div class="pager_link">
 							<?php echo $pager['pager_res'];?>
@@ -160,10 +163,11 @@ EOF;
 
 				</div>
 			</div>
-		</div>
+		
 		<!-- End: Mrs-->
 	</div>
 	<!-- END:Main -->
+
 
 	<!-- START:footer -->
 	<?php include("common/footer.html"); ?>
